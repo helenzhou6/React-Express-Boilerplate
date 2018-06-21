@@ -11,6 +11,7 @@
     "start:client": "parcel client/public/index.html",
     "lint": "./node_modules/.bin/eslint **/*.js",
     "build": "parcel build client/public/index.html",
+    "start:all": "npm run build && npm run start",
     "start": "node server/src/index.js",
     "heroku-postbuild": "npm run build"
   },
