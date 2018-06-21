@@ -15,7 +15,7 @@ Minimal React boilerplate.
 ## Back End
 Should you not require a back-end server:
 * Delete the `server` folder
-* Run `npm uninstall express`
+* Run `npm uninstall express tap-spec tape supertest nyc`
 * Replace the last three lines in `package.json` with:
 ```json
     "start": "parcel ./public/index.html",

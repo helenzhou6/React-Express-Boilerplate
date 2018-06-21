@@ -7,6 +7,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
+    "test:server": "NODE_ENV=test nyc tape server/test/*.backendtest.js | tap-spec",
     "start:client": "parcel client/public/index.html",
     "lint": "./node_modules/.bin/eslint **/*.js",
     "build": "parcel build client/public/index.html",
@@ -15,6 +16,7 @@
   },
   "pre-commit": [
     "build",
+    "test:server",
     "test"
   ],
   "repository": {
@@ -45,13 +47,17 @@
     "jest": "^22.4.4",
     "parcel-bundler": "^1.8.1",
     "pre-commit": "^1.2.2",
-    "react-testing-library": "^3.1.3"
+    "react-testing-library": "^3.1.3",
+    "tape": "^4.9.1"
   },
   "dependencies": {
     "express": "^4.16.3",
+    "nyc": "^12.0.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "styled-components": "^3.3.0"
+    "styled-components": "^3.3.0",
+    "supertest": "^3.1.0",
+    "tap-spec": "^5.0.0"
   },
   "jest": {
     "moduleNameMapper": {
