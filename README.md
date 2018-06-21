@@ -16,12 +16,12 @@ Minimal React boilerplate.
 Should you not require a back-end server:
 * Delete the `server` folder
 * Run `npm uninstall express tap-spec tape supertest nyc`
-* Replace the last three lines in `package.json` with:
+* Remove the `test:server` script and replace the last three lines in `package.json` with:
 ```json
     "start": "parcel ./public/index.html",
     "build": "parcel build ./public/index.html --public-url ./",
 ```
-And instead it will run on `http://localhost:1234/`
+-- Now running `npm start` will build and be viewed on `http://localhost:1234/`
 
 ## Placeholders
 Remove these folders and files if not in use:

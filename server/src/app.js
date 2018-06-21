@@ -1,7 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const path = require("path");
-const router = require("./router");
+const controllers = require("./controllers");
 
 const app = express();
 
@@ -21,11 +20,6 @@ app.use(function (_, res, next) {
 
 app.use(express.static("./dist"));
 
-app.get("/", (_, res) => {
-  console.log("hreached");
-  res.sendFile(path.join(__dirname, "../../dist", "index.html"));
-});
-
-app.use(router);
+app.use(controllers);
 
 module.exports = app;

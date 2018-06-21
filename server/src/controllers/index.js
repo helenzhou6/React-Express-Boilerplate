@@ -1,6 +1,11 @@
 const express = require("express");
+const path = require("path");
 
 const router = express.Router();
+
+router.get("/", (_, res) => {
+  res.sendFile(path.join(__dirname, "../../../dist", "index.html"));
+});
 
 router.use((req, res) => {
   res.status(404).json({
