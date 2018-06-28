@@ -1,17 +1,19 @@
 import React from "react";
-import styled from "styled-components";
 
-const Wrapper = styled.div`
-  padding: 2rem;
-  max-width: 20rem;
-  margin: 0 auto;
-`;
+import { theme } from "../styled/theme";
+import { ThemeProvider } from "styled-components";
+import "normalize.css";
+
+import Footer from "./footer";
 
 const App = () => {
   return (
-    <Wrapper>
-      <h1>Hello World!</h1>
-    </Wrapper>
+    <ThemeProvider theme={theme}>
+      <React.Fragment>
+        <h1>Hello World!</h1>
+        <Footer />
+      </React.Fragment>
+    </ThemeProvider>
   );
 };
 

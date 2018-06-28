@@ -5,6 +5,7 @@ Minimal React boilerplate.
 * React Front End - with `styled-components`
 * React testing with `jest` and `react-testing-library`
 * Express back end server
+* ESLint added and ready to go
 
 ## Running locally
 1. Git clone this repo
