@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 const App = () => {
   return (
     <Wrapper>
-      <h1>Hello World</h1>
+      <h1>Hello World!</h1>
     </Wrapper>
   );
 };

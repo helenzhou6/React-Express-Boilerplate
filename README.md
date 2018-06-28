@@ -9,8 +9,9 @@ Minimal React boilerplate.
 ## Running locally
 1. Git clone this repo
 2. Run `npm i` to install the required dependencies.
-3. Run `npm run build` to let parcel do it's thing.
+3. Run `build:client:watch` to let parcel do it's thing.
 4. Run `npm start` and view on `http://localhost:3000`
+  * Any changes you make will update automatically on `http://localhost:3000`
 
 ## Back End
 Should you not require a back-end server:
